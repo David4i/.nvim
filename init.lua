@@ -1,1 +1,1 @@
-require("yun.lazy")
+require("config.lazy")
