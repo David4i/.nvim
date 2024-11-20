@@ -7,3 +7,8 @@ keymap.set("n", "<S-TAB>", "<cmd>bprevious<CR>", { noremap = true, desc = "Previ
 
 -- Handle select the whole content
 keymap.set("n", "<C-a>", "gg<S-v>G", opts)
+
+-- Toggle inlay hints
+keymap.set("n", "<leader>i", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
