@@ -1,4 +1,11 @@
 return {
+  { "kvrohit/substrata.nvim" },
+  {
+    "catppuccin/nvim",
+    opts = {
+      transparent_background = true,
+    },
+  },
   {
     "Shatur/neovim-ayu",
     config = function()
