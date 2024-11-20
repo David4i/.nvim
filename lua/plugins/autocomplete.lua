@@ -6,4 +6,9 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "LazyFile",
+    opts = {},
+  },
 }
