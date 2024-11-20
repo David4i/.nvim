@@ -5,4 +5,5 @@ return {
   { import = "lazyvim.plugins.extras.lang.omnisharp" },
   { import = "lazyvim.plugins.extras.lang.vue" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
+  { import = "lazyvim.plugins.extras.util.gitui" },
 }
