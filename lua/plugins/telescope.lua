@@ -3,7 +3,7 @@ return {
     "nvim-telescope/telescope.nvim",
     keys = {
       { "sf", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
-      { "SF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+      { "sF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
       {
         "<leader>fp",
         function()
