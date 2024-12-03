@@ -2,7 +2,16 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      { "sf", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
+      {
+        "sf",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.find_files({
+            no_ignore = false,
+            hidden = true,
+          })
+        end,
+      },
       { "sF", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
       {
         "<leader>fp",
@@ -14,13 +23,15 @@ return {
     },
     opts = {
       defaults = {
-        respect_gitignore = false,
+        wrap_results = true,
         layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
         file_ignore_patterns = {
           "node_modules",
+          ".git",
+          "dist",
+          "build",
         },
       },
     },
